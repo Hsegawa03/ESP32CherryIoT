@@ -1,4 +1,4 @@
-const int swPin = 4;
+const int swPin = 32;
 //4:ConnectorA 9:ConnectorB
 
 void setup() {

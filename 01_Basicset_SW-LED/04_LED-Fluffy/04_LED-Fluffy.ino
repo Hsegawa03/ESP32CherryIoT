@@ -1,4 +1,4 @@
-const int ledPin = 4;
+const int ledPin = 25;
 //4:ConnectorA 9:ConnectorB 10:Builtin
 
 void setup() {

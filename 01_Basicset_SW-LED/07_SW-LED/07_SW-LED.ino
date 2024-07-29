@@ -1,5 +1,5 @@
-const int swPin = 4; //4:ConnectorA 9:ConnectorB
-const int ledPin = 9; //4:ConnectorA 9:ConnectorB 10:Builtin
+const int swPin = 32; //4:ConnectorA 9:ConnectorB
+const int ledPin = 25; //4:ConnectorA 9:ConnectorB 10:Builtin
 
 void setup() {
   Serial.begin(115200);
@@ -7,14 +7,26 @@ void setup() {
   pinMode(ledPin, OUTPUT);
 }
 
+// void loop() { 
+//   if (digitalRead(swPin) == HIGH) {
+//     digitalWrite(ledPin, HIGH); //ON
+//     Serial.println("Pushed");
+//     delay(300);
+//   } else {
+//     digitalWrite(ledPin, LOW); //OFF
+//     Serial.println("Not Pushed");
+//     delay(300);
+//   }
+// }
+
 void loop() { 
   if (digitalRead(swPin) == HIGH) {
-    digitalWrite(ledPin, HIGH); //ON
+    digitalWrite(ledPin, LOW); //ON
     Serial.println("Pushed");
-    delay(300);
+    delay(100);
   } else {
-    digitalWrite(ledPin, LOW); //OFF
+    digitalWrite(ledPin, HIGH); //OFF
     Serial.println("Not Pushed");
-    delay(300);
+    delay(100);
   }
 }
